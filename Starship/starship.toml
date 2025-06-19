@@ -1,0 +1,49 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """
+$directory[(\\[$git_branch( $git_status )\\] )](bold purple)$conda$python$nodejs
+$username$character$status"""
+
+[directory]
+truncation_length = 0
+format = "[\\[📂 $path$read_only\\]](bold cyan) "
+read_only = " 🔒 "
+
+[git_branch]
+always_show_remote = true
+format = "[🌱 $branch](bold purple)"
+
+[git_status]
+format = "$all_status$ahead_behind"
+conflicted = "⚔️"
+ahead = "😎"
+behind = "😭"
+diverged = "⛓️‍💥"
+up_to_date = "😋"
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
+staged = "🪣"
+renamed = "♻️"
+deleted = "🗑️"
+typechanged = "🔄️"
+
+[conda]
+format = "[\\[Conda $environment\\]](bold green) "
+truncation_length = 1
+
+[python]
+format = "[\\[Python $version\\]](bold yellow) "
+
+[nodejs]
+format = "[\\[Node.js $version\\]](bold green) "
+
+[username]
+format = "⚡"
+
+[character]
+format = "[🤣👉](bold yellow) "
+
+[status]
+disabled = false
+format = "[Exit\\($hex_status\\)](bold red) "
