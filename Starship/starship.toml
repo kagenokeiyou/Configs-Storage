@@ -33,10 +33,10 @@ format = "[\\[Conda $environment\\]](bold green) "
 truncation_length = 1
 
 [python]
-format = "[\\[Python $version\\]](bold yellow) "
+format = "[\\[Py $version\\]](bold yellow) "
 
 [nodejs]
-format = "[\\[Node.js $version\\]](bold green) "
+format = "[\\[Node $version\\]](bold green) "
 
 [username]
 format = "⚡"
